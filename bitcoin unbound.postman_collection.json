@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "afdf0a43-2ec6-4427-923f-d8d559407f76",
+		"name": "bitcoin unbound",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16560951"
+	},
+	"item": [
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "subscription",
+					"item": [
+						{
+							"name": "actions",
+							"item": [
+								{
+									"name": "add action",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \"action\": \"read\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/jobs/1/subscription/item/7184896",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"jobs",
+												"1",
+												"subscription",
+												"item",
+												"7184896"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \"action\": \"read\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/jobs/1/subscription/item/7184896",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"jobs",
+												"1",
+												"subscription",
+												"item",
+												"7184896"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "create user_job entry",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/3/subscription",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"3",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete user_job entry",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/1/subscription",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"1",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user_job entry",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"in_progress\",\n    \"lastSeenItemId\": \"articleDate\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/jobs/3/subscription",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"3",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all user jobs of the user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/subscriptions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"subscriptions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "getjob",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getjob",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f5-jaevbZ+GZWmaflbPOVRfM5Vi6yw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"deletedAt\": 0,\n        \"id\": 1,\n        \"jobStatus\": \"read\",\n        \"userId\": 26,\n        \"issueId\": 18,\n        \"lastSeenContentId\": 741,\n        \"name\": \"bitcoin\",\n        \"conditions\": {\n            \"approved\": false,\n            \"entityId\": [\n                705478,\n                695734\n            ],\n            \"contentTypeId\": 7\n        },\n        \"createdAt\": \"2022-11-03T14:59:29.000Z\",\n        \"updatedAt\": \"2022-11-04T18:16:28.000Z\"\n    },\n    {\n        \"deletedAt\": 0,\n        \"id\": 3,\n        \"jobStatus\": \"pending\",\n        \"userId\": 26,\n        \"issueId\": 1,\n        \"lastSeenContentId\": null,\n        \"name\": \"bitcoin\",\n        \"conditions\": {\n            \"approved\": false,\n            \"entityId\": [\n                2,\n                3,\n                4\n            ],\n            \"contentTypeId\": 99\n        },\n        \"createdAt\": \"2022-11-04T18:17:18.000Z\",\n        \"updatedAt\": \"2022-11-04T18:17:18.000Z\"\n    },\n    {\n        \"deletedAt\": 0,\n        \"id\": 4,\n        \"jobStatus\": \"pending\",\n        \"userId\": 26,\n        \"issueId\": 1,\n        \"lastSeenContentId\": null,\n        \"name\": \"bitcoin\",\n        \"conditions\": {\n            \"approved\": false,\n            \"contentTypeId\": 7\n        },\n        \"createdAt\": \"2022-11-04T18:18:04.000Z\",\n        \"updatedAt\": \"2022-11-04T18:18:04.000Z\"\n    },\n    {\n        \"deletedAt\": 0,\n        \"id\": 5,\n        \"jobStatus\": \"pending\",\n        \"userId\": 26,\n        \"issueId\": 18,\n        \"lastSeenContentId\": null,\n        \"name\": \"bitcoin\",\n        \"conditions\": {\n            \"approved\": false,\n            \"contentTypeId\": 7\n        },\n        \"createdAt\": \"2022-11-04T18:20:42.000Z\",\n        \"updatedAt\": \"2022-11-04T18:20:42.000Z\"\n    },\n    {\n        \"deletedAt\": 0,\n        \"id\": 6,\n        \"jobStatus\": \"pending\",\n        \"userId\": 26,\n        \"issueId\": 18,\n        \"lastSeenContentId\": null,\n        \"name\": \"bitcoin\",\n        \"conditions\": {\n            \"approved\": false,\n            \"entityId\": [\n                705478,\n                695734\n            ],\n            \"contentTypeId\": 7\n        },\n        \"createdAt\": \"2022-11-04T18:24:51.000Z\",\n        \"updatedAt\": \"2022-11-04T18:24:51.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "addjob",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n        \"contentTypeId\": 7,\n        \"entityId\": [705478, 695734],\n        \"approved\": false\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addjob",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-FXJCateKvAWA7wB8mOHs2Sx+U9A\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deletedAt\": 0,\n    \"jobStatus\": \"pending\",\n    \"id\": 7,\n    \"issueId\": 18,\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n        \"contentTypeId\": 7,\n        \"entityId\": [\n            705478,\n            695734\n        ],\n        \"approved\": false\n    },\n    \"userId\": 26,\n    \"updatedAt\": \"2022-11-04T18:26:14.265Z\",\n    \"createdAt\": \"2022-11-04T18:26:14.265Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getOne",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"220-bUBB0EpPEP3+uQvNPlph6Q7ggU0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deletedAt\": 0,\n    \"id\": 1,\n    \"jobStatus\": \"read\",\n    \"userId\": 26,\n    \"issueId\": 18,\n    \"lastSeenContentId\": 741,\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n        \"approved\": false,\n        \"entityId\": [\n            705478,\n            695734\n        ],\n        \"contentTypeId\": 7\n    },\n    \"createdAt\": \"2022-11-03T14:59:29.000Z\",\n    \"updatedAt\": \"2022-11-04T18:16:28.000Z\",\n    \"lastSeenContent\": {\n        \"contentTypeId\": 7,\n        \"description\": null,\n        \"entityId\": 41103,\n        \"eventId\": 84,\n        \"id\": 741,\n        \"issueId\": 18,\n        \"label\": null,\n        \"order\": 0,\n        \"position\": null,\n        \"s3ObjectKey\": null,\n        \"title\": null,\n        \"url\": null,\n        \"createdAt\": \"2022-01-19T18:05:46.000Z\",\n        \"updatedAt\": \"2022-01-19T18:05:46.000Z\",\n        \"event\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs/1/items?startAfter=7243260&order=[\"title\",\"-lastReviewedAt\"]",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"1",
+								"items"
+							],
+							"query": [
+								{
+									"key": "startAfter",
+									"value": "7243260"
+								},
+								{
+									"key": "order",
+									"value": "[\"title\",\"-lastReviewedAt\"]"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getRelated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/5/content?limit=1500&order=DESC",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"5",
+										"content"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1500"
+										},
+										{
+											"key": "order",
+											"value": "DESC"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49831"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c2a7-2RwyOHSwa0DrVamFCQVvsdHrEpc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 100,\n    \"rows\": [\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 1013704,\n            \"eventId\": 1141,\n            \"id\": 7114,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-10-10T15:53:38.000Z\",\n            \"updatedAt\": \"2022-10-10T15:53:38.000Z\",\n            \"event\": {\n                \"date\": \"2022-10-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 1141,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Billionaire Paul Tudor Jones Continues to Hold Bitcoin\",\n                \"createdAt\": \"2022-10-10T15:53:38.000Z\",\n                \"updatedAt\": \"2022-10-10T15:53:38.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 999027,\n            \"eventId\": 1134,\n            \"id\": 7101,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-09-21T16:41:47.000Z\",\n            \"updatedAt\": \"2022-09-21T16:41:47.000Z\",\n            \"event\": {\n                \"date\": \"2022-09-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 1134,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"How steep Fed rate hikes affect your finances\",\n                \"createdAt\": \"2022-09-21T16:41:46.000Z\",\n                \"updatedAt\": \"2022-09-21T16:41:46.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 998296,\n            \"eventId\": 1126,\n            \"id\": 7092,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-09-20T19:13:14.000Z\",\n            \"updatedAt\": \"2022-09-20T19:13:14.000Z\",\n            \"event\": {\n                \"date\": \"2022-09-20T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 1126,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Colorado Becomes First US State To Accept Bitcoin As Payment For Taxes\",\n                \"createdAt\": \"2022-09-20T19:13:14.000Z\",\n                \"updatedAt\": \"2022-09-20T19:13:14.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 986620,\n            \"eventId\": 729,\n            \"id\": 5814,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-09-05T20:27:19.000Z\",\n            \"updatedAt\": \"2022-09-05T20:27:19.000Z\",\n            \"event\": {\n                \"date\": \"2022-09-05T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 729,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bank of Russia Agrees to Allow Cryptocurrencies for Cross-Border Payments\",\n                \"createdAt\": \"2022-09-05T16:40:51.000Z\",\n                \"updatedAt\": \"2022-09-05T16:40:51.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 986369,\n            \"eventId\": 729,\n            \"id\": 5793,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-09-05T16:40:51.000Z\",\n            \"updatedAt\": \"2022-09-05T16:40:51.000Z\",\n            \"event\": {\n                \"date\": \"2022-09-05T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 729,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bank of Russia Agrees to Allow Cryptocurrencies for Cross-Border Payments\",\n                \"createdAt\": \"2022-09-05T16:40:51.000Z\",\n                \"updatedAt\": \"2022-09-05T16:40:51.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 986370,\n            \"eventId\": 729,\n            \"id\": 5792,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-09-05T16:40:51.000Z\",\n            \"updatedAt\": \"2022-09-05T16:40:51.000Z\",\n            \"event\": {\n                \"date\": \"2022-09-05T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 729,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bank of Russia Agrees to Allow Cryptocurrencies for Cross-Border Payments\",\n                \"createdAt\": \"2022-09-05T16:40:51.000Z\",\n                \"updatedAt\": \"2022-09-05T16:40:51.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 968726,\n            \"eventId\": 655,\n            \"id\": 5622,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-16T13:09:36.000Z\",\n            \"updatedAt\": \"2022-08-16T13:09:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 655,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Digihost Reports Positive Second Quarter 2022 Results\",\n                \"createdAt\": \"2022-08-16T13:09:34.000Z\",\n                \"updatedAt\": \"2022-08-16T13:09:34.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 968727,\n            \"eventId\": 655,\n            \"id\": 5621,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-16T13:09:36.000Z\",\n            \"updatedAt\": \"2022-08-16T13:09:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 655,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Digihost Reports Positive Second Quarter 2022 Results\",\n                \"createdAt\": \"2022-08-16T13:09:34.000Z\",\n                \"updatedAt\": \"2022-08-16T13:09:34.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 968716,\n            \"eventId\": 655,\n            \"id\": 5620,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-16T13:09:36.000Z\",\n            \"updatedAt\": \"2022-08-16T13:09:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 655,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Digihost Reports Positive Second Quarter 2022 Results\",\n                \"createdAt\": \"2022-08-16T13:09:34.000Z\",\n                \"updatedAt\": \"2022-08-16T13:09:34.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 964695,\n            \"eventId\": 624,\n            \"id\": 5493,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-12T00:14:11.000Z\",\n            \"updatedAt\": \"2022-08-12T00:14:11.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-11T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 624,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"BULLISH BIT: Rallying Around Bitcoin During A Global Recession ️\\u200d️\",\n                \"createdAt\": \"2022-08-11T22:08:41.000Z\",\n                \"updatedAt\": \"2022-08-11T22:08:41.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 964247,\n            \"eventId\": 624,\n            \"id\": 5489,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-11T22:08:41.000Z\",\n            \"updatedAt\": \"2022-08-11T22:08:41.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-11T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 624,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"BULLISH BIT: Rallying Around Bitcoin During A Global Recession ️\\u200d️\",\n                \"createdAt\": \"2022-08-11T22:08:41.000Z\",\n                \"updatedAt\": \"2022-08-11T22:08:41.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 962686,\n            \"eventId\": 610,\n            \"id\": 5469,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-10T18:20:27.000Z\",\n            \"updatedAt\": \"2022-08-10T18:20:27.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 610,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Terra Founder Do Kwon Gets Backlash For His Tweet Over Decentralized Money\",\n                \"createdAt\": \"2022-08-10T16:06:57.000Z\",\n                \"updatedAt\": \"2022-08-10T16:06:57.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 962875,\n            \"eventId\": 610,\n            \"id\": 5468,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-10T16:16:16.000Z\",\n            \"updatedAt\": \"2022-08-10T16:16:16.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 610,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Terra Founder Do Kwon Gets Backlash For His Tweet Over Decentralized Money\",\n                \"createdAt\": \"2022-08-10T16:06:57.000Z\",\n                \"updatedAt\": \"2022-08-10T16:06:57.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 962875,\n            \"eventId\": 610,\n            \"id\": 5467,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-10T16:06:58.000Z\",\n            \"updatedAt\": \"2022-08-10T16:06:58.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 610,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Terra Founder Do Kwon Gets Backlash For His Tweet Over Decentralized Money\",\n                \"createdAt\": \"2022-08-10T16:06:57.000Z\",\n                \"updatedAt\": \"2022-08-10T16:06:57.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 957113,\n            \"eventId\": 609,\n            \"id\": 5466,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-04T20:16:01.000Z\",\n            \"updatedAt\": \"2022-08-04T20:16:01.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-04T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 609,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin’s Mining Difficulty Rises for the First Time in 57 Days, BTC Hashrate Slipped 1.7% Lower in Q2\",\n                \"createdAt\": \"2022-08-04T20:16:01.000Z\",\n                \"updatedAt\": \"2022-08-04T20:16:01.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 954248,\n            \"eventId\": 608,\n            \"id\": 5465,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-02T17:44:55.000Z\",\n            \"updatedAt\": \"2022-08-02T17:44:55.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-02T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 608,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Cryptoverse: Bitcoin beats the heat in a jumpin’ July\",\n                \"createdAt\": \"2022-08-02T17:44:54.000Z\",\n                \"updatedAt\": \"2022-08-02T17:44:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 953511,\n            \"eventId\": 604,\n            \"id\": 5459,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-01T17:05:21.000Z\",\n            \"updatedAt\": \"2022-08-01T17:05:21.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-01T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 604,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"How blockchain technology can revolutionize international trade\",\n                \"createdAt\": \"2022-08-01T17:05:21.000Z\",\n                \"updatedAt\": \"2022-08-01T17:05:21.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 953444,\n            \"eventId\": 604,\n            \"id\": 5458,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-08-01T17:05:21.000Z\",\n            \"updatedAt\": \"2022-08-01T17:05:21.000Z\",\n            \"event\": {\n                \"date\": \"2022-08-01T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 604,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"How blockchain technology can revolutionize international trade\",\n                \"createdAt\": \"2022-08-01T17:05:21.000Z\",\n                \"updatedAt\": \"2022-08-01T17:05:21.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 936046,\n            \"eventId\": 567,\n            \"id\": 4625,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-07-12T21:14:53.000Z\",\n            \"updatedAt\": \"2022-07-12T21:14:53.000Z\",\n            \"event\": {\n                \"date\": \"2022-07-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 567,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Suing SEC Is a Possibility, Bitwise Chief Compliance Officer Says\",\n                \"createdAt\": \"2022-07-12T19:08:37.000Z\",\n                \"updatedAt\": \"2022-07-12T19:08:37.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 856162,\n            \"eventId\": 96,\n            \"id\": 791,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-04-20T03:03:55.000Z\",\n            \"updatedAt\": \"2022-04-20T03:03:55.000Z\",\n            \"event\": {\n                \"date\": \"2022-04-20T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 96,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"DeSantis pushes redistricting map that splits up Black voters\",\n                \"createdAt\": \"2022-04-20T03:03:55.000Z\",\n                \"updatedAt\": \"2022-04-20T03:03:55.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 744745,\n            \"eventId\": 91,\n            \"id\": 759,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:12:03.000Z\",\n            \"updatedAt\": \"2022-01-19T18:12:03.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 91,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Polygon Whitehat Rewarded $75,000 for Saving Billions in User Funds\",\n                \"createdAt\": \"2022-03-06T02:31:43.000Z\",\n                \"updatedAt\": \"2022-03-06T02:31:43.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 744752,\n            \"eventId\": 91,\n            \"id\": 758,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:12:03.000Z\",\n            \"updatedAt\": \"2022-01-19T18:12:03.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 91,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Polygon Whitehat Rewarded $75,000 for Saving Billions in User Funds\",\n                \"createdAt\": \"2022-03-06T02:31:43.000Z\",\n                \"updatedAt\": \"2022-03-06T02:31:43.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 744621,\n            \"eventId\": 91,\n            \"id\": 757,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:12:03.000Z\",\n            \"updatedAt\": \"2022-01-19T18:12:03.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 91,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Polygon Whitehat Rewarded $75,000 for Saving Billions in User Funds\",\n                \"createdAt\": \"2022-03-06T02:31:43.000Z\",\n                \"updatedAt\": \"2022-03-06T02:31:43.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 744623,\n            \"eventId\": 91,\n            \"id\": 756,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:12:03.000Z\",\n            \"updatedAt\": \"2022-01-19T18:12:03.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 91,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Polygon Whitehat Rewarded $75,000 for Saving Billions in User Funds\",\n                \"createdAt\": \"2022-03-06T02:31:43.000Z\",\n                \"updatedAt\": \"2022-03-06T02:31:43.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 744624,\n            \"eventId\": 91,\n            \"id\": 755,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:12:03.000Z\",\n            \"updatedAt\": \"2022-01-19T18:12:03.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-21T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 91,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Polygon Whitehat Rewarded $75,000 for Saving Billions in User Funds\",\n                \"createdAt\": \"2022-03-06T02:31:43.000Z\",\n                \"updatedAt\": \"2022-03-06T02:31:43.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 815720,\n            \"eventId\": 89,\n            \"id\": 767,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-02-18T14:33:58.000Z\",\n            \"updatedAt\": \"2022-02-18T14:33:58.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-17T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 89,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation To Push Bitcoin Higher, Analyst Says | CryptoGazette\",\n                \"createdAt\": \"2022-02-18T14:14:42.000Z\",\n                \"updatedAt\": \"2022-02-18T14:14:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 815915,\n            \"eventId\": 89,\n            \"id\": 765,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-02-18T14:24:41.000Z\",\n            \"updatedAt\": \"2022-02-18T14:24:41.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-17T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 89,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation To Push Bitcoin Higher, Analyst Says | CryptoGazette\",\n                \"createdAt\": \"2022-02-18T14:14:42.000Z\",\n                \"updatedAt\": \"2022-02-18T14:14:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 815920,\n            \"eventId\": 89,\n            \"id\": 763,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-02-18T14:14:42.000Z\",\n            \"updatedAt\": \"2022-02-18T14:14:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-17T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 89,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation To Push Bitcoin Higher, Analyst Says | CryptoGazette\",\n                \"createdAt\": \"2022-02-18T14:14:42.000Z\",\n                \"updatedAt\": \"2022-02-18T14:14:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 97538,\n            \"eventId\": 90,\n            \"id\": 754,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:47.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:47.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-17T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 90,\n                \"issueId\": 17,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation To Push Bitcoin Higher, Analyst Says | CryptoGazette\",\n                \"createdAt\": \"2022-02-18T14:15:29.000Z\",\n                \"updatedAt\": \"2022-02-18T14:15:29.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 210941,\n            \"eventId\": 89,\n            \"id\": 751,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:46.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:46.000Z\",\n            \"event\": {\n                \"date\": \"2022-02-17T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 89,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation To Push Bitcoin Higher, Analyst Says | CryptoGazette\",\n                \"createdAt\": \"2022-02-18T14:14:42.000Z\",\n                \"updatedAt\": \"2022-02-18T14:14:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 741225,\n            \"eventId\": 44,\n            \"id\": 590,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-18T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 44,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Global Inflation Holds No Fears for Equities Bulls, BofA Survey Shows - Bloomberg\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 730225,\n            \"eventId\": 45,\n            \"id\": 638,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 5,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 45,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With rising rates and inflation, investors are split on how to value bitcoin. Here's why\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 732355,\n            \"eventId\": 45,\n            \"id\": 616,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 45,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With rising rates and inflation, investors are split on how to value bitcoin. Here's why\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 730766,\n            \"eventId\": 45,\n            \"id\": 615,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 45,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With rising rates and inflation, investors are split on how to value bitcoin. Here's why\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 731297,\n            \"eventId\": 45,\n            \"id\": 595,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 45,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With rising rates and inflation, investors are split on how to value bitcoin. Here's why\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 731176,\n            \"eventId\": 45,\n            \"id\": 594,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-16T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 45,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With rising rates and inflation, investors are split on how to value bitcoin. Here's why\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 728524,\n            \"eventId\": 50,\n            \"id\": 636,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:31.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:31.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-15T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 50,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation, Omen Of Creative Destruction\",\n                \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n                \"updatedAt\": \"2022-01-19T18:04:30.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 727302,\n            \"eventId\": 50,\n            \"id\": 637,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:31.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:31.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-15T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 50,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Inflation, Omen Of Creative Destruction\",\n                \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n                \"updatedAt\": \"2022-01-19T18:04:30.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 725584,\n            \"eventId\": 46,\n            \"id\": 640,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 11,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 722602,\n            \"eventId\": 46,\n            \"id\": 639,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 10,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 725061,\n            \"eventId\": 46,\n            \"id\": 619,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 9,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 724604,\n            \"eventId\": 46,\n            \"id\": 618,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 8,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 720895,\n            \"eventId\": 46,\n            \"id\": 617,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 7,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 722740,\n            \"eventId\": 46,\n            \"id\": 600,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 5,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 721261,\n            \"eventId\": 46,\n            \"id\": 601,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 720899,\n            \"eventId\": 46,\n            \"id\": 598,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 720896,\n            \"eventId\": 46,\n            \"id\": 599,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 720612,\n            \"eventId\": 46,\n            \"id\": 597,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 720614,\n            \"eventId\": 46,\n            \"id\": 596,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-14T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 46,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"With This Month Set For Peak Inflation, How Will Bitcoin Price Move?\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 716784,\n            \"eventId\": 47,\n            \"id\": 642,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 18,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 714440,\n            \"eventId\": 47,\n            \"id\": 641,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 17,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 719458,\n            \"eventId\": 47,\n            \"id\": 627,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 16,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 716607,\n            \"eventId\": 47,\n            \"id\": 626,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 15,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 716609,\n            \"eventId\": 47,\n            \"id\": 631,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 14,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 716394,\n            \"eventId\": 47,\n            \"id\": 632,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 13,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715582,\n            \"eventId\": 47,\n            \"id\": 625,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 12,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715467,\n            \"eventId\": 47,\n            \"id\": 624,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 11,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715299,\n            \"eventId\": 47,\n            \"id\": 623,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 10,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715296,\n            \"eventId\": 47,\n            \"id\": 621,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 9,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715023,\n            \"eventId\": 47,\n            \"id\": 622,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 8,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 714880,\n            \"eventId\": 47,\n            \"id\": 620,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 7,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 717698,\n            \"eventId\": 47,\n            \"id\": 606,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 5,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 716965,\n            \"eventId\": 47,\n            \"id\": 608,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 715032,\n            \"eventId\": 47,\n            \"id\": 605,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-13T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 47,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Billionaire CZ reveals the only way to Fight Increasing Inflation Levels\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-08-08T17:50:54.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709758,\n            \"eventId\": 48,\n            \"id\": 779,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 23,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-03-29T19:04:23.000Z\",\n            \"updatedAt\": \"2022-03-29T19:04:23.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711535,\n            \"eventId\": 48,\n            \"id\": 651,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 22,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 710791,\n            \"eventId\": 48,\n            \"id\": 650,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 21,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 710555,\n            \"eventId\": 48,\n            \"id\": 649,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 20,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 710110,\n            \"eventId\": 48,\n            \"id\": 648,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 19,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709913,\n            \"eventId\": 48,\n            \"id\": 647,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 18,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709917,\n            \"eventId\": 48,\n            \"id\": 645,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 17,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709429,\n            \"eventId\": 48,\n            \"id\": 646,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 16,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709145,\n            \"eventId\": 48,\n            \"id\": 644,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 15,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 708764,\n            \"eventId\": 48,\n            \"id\": 643,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 14,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:42.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 712852,\n            \"eventId\": 48,\n            \"id\": 633,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 13,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 712857,\n            \"eventId\": 48,\n            \"id\": 634,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 12,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 712640,\n            \"eventId\": 48,\n            \"id\": 635,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 11,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711284,\n            \"eventId\": 48,\n            \"id\": 630,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 10,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 710424,\n            \"eventId\": 48,\n            \"id\": 629,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 9,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 708703,\n            \"eventId\": 48,\n            \"id\": 628,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 8,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:04:30.000Z\",\n            \"updatedAt\": \"2022-01-19T18:04:30.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711752,\n            \"eventId\": 48,\n            \"id\": 614,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 6,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711548,\n            \"eventId\": 48,\n            \"id\": 613,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 5,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711415,\n            \"eventId\": 48,\n            \"id\": 612,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 4,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711291,\n            \"eventId\": 48,\n            \"id\": 611,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 3,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 711061,\n            \"eventId\": 48,\n            \"id\": 610,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709909,\n            \"eventId\": 48,\n            \"id\": 609,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 709921,\n            \"eventId\": 48,\n            \"id\": 607,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-12T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 48,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin Rises as Inflation Hits 7%\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 706073,\n            \"eventId\": 49,\n            \"id\": 593,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-11T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 49,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Can't Beat Gold as an Inflation Hedge, Says Barrick Boss - Bloomberg\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 706075,\n            \"eventId\": 49,\n            \"id\": 592,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-11T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 49,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Can't Beat Gold as an Inflation Hedge, Says Barrick Boss - Bloomberg\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 705478,\n            \"eventId\": 49,\n            \"id\": 591,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T17:58:36.000Z\",\n            \"updatedAt\": \"2022-01-19T17:58:36.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-11T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 49,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Crypto Can't Beat Gold as an Inflation Hedge, Says Barrick Boss - Bloomberg\",\n                \"createdAt\": \"2022-01-19T17:58:35.000Z\",\n                \"updatedAt\": \"2022-01-19T17:58:35.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 697734,\n            \"eventId\": 53,\n            \"id\": 673,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 53,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Global shares shake off inflation fears and Omicron, as investors prepare for faster Fed interest-rate rises\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 695734,\n            \"eventId\": 53,\n            \"id\": 672,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-10T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 53,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Global shares shake off inflation fears and Omicron, as investors prepare for faster Fed interest-rate rises\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 693915,\n            \"eventId\": 51,\n            \"id\": 670,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-09T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 51,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin crash ahead? Expert warns higher inflation could whip BTC price to $30K\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 693858,\n            \"eventId\": 51,\n            \"id\": 669,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-09T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 51,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin crash ahead? Expert warns higher inflation could whip BTC price to $30K\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 693859,\n            \"eventId\": 51,\n            \"id\": 668,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2022-01-09T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 51,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Bitcoin crash ahead? Expert warns higher inflation could whip BTC price to $30K\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 600340,\n            \"eventId\": 52,\n            \"id\": 671,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2021-12-20T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 52,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Gold is losing its status as an inflation hedge, two traders warn\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 594226,\n            \"eventId\": 60,\n            \"id\": 692,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 2,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2021-12-19T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 60,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Hyperinflation Will Change Everything, But Bitcoin Is Dilution Proof\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 594223,\n            \"eventId\": 60,\n            \"id\": 689,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2021-12-19T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 60,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Hyperinflation Will Change Everything, But Bitcoin Is Dilution Proof\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 594123,\n            \"eventId\": 60,\n            \"id\": 688,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 0,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:44.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:44.000Z\",\n            \"event\": {\n                \"date\": \"2021-12-19T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 60,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Hyperinflation Will Change Everything, But Bitcoin Is Dilution Proof\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        },\n        {\n            \"contentTypeId\": 7,\n            \"description\": null,\n            \"entityId\": 592753,\n            \"eventId\": 62,\n            \"id\": 710,\n            \"issueId\": 18,\n            \"label\": null,\n            \"order\": 1,\n            \"position\": null,\n            \"s3ObjectKey\": null,\n            \"title\": null,\n            \"url\": null,\n            \"createdAt\": \"2022-01-19T18:05:45.000Z\",\n            \"updatedAt\": \"2022-01-19T18:05:45.000Z\",\n            \"event\": {\n                \"date\": \"2021-12-18T00:00:00.000Z\",\n                \"iconUrl\": \"\",\n                \"id\": 62,\n                \"issueId\": 18,\n                \"sentiment\": \"\",\n                \"title\": \"Billionaire and Former Crypto Skeptic Ray Dalio Issues Inflation Warning About Cash: Report\",\n                \"createdAt\": \"2022-01-19T18:05:42.000Z\",\n                \"updatedAt\": \"2022-01-19T18:05:42.000Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isPublic\": false,\n    \"conditions\": {\n        \"order\": [\n            \"-articleDate\",\n            \"id\"\n        ],\n        \"segment\": \"\",\n        \"sentiment\": \"\",\n        \"timelineIds\": [\n            \"31\",\n            \"20\",\n            \"24\"\n        ],\n        \"limit\": 100,\n        \"offset\": 0,\n        \"primaryKeywords\": [\n            \"Bitcoin\"\n        ],\n        \"id\": \"\",\n        \"compositeKeyword\": {\n            \"compositeKeywords\": [],\n            \"keywords\": [\n                \"\"\n            ],\n            \"operator\": \"has\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/jobs/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"issueId\": 18,\n    \"lastSeenContentId\": 741,\n    \"jobStatus\": \"read\",\n    \"conditions\": {\n        \"contentTypeId\": 7,\n        \"entityId\": [705478, 695734],\n        \"approved\": false\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/jobs/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"220-xAsfue6pdKGnjeUUTSnXp32LkYo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deletedAt\": 0,\n    \"id\": 1,\n    \"jobStatus\": \"read\",\n    \"userId\": 26,\n    \"issueId\": 18,\n    \"lastSeenContentId\": 741,\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n        \"approved\": false,\n        \"entityId\": [\n            705478,\n            695734\n        ],\n        \"contentTypeId\": 7\n    },\n    \"createdAt\": \"2022-11-03T14:59:29.000Z\",\n    \"updatedAt\": \"2022-11-04T18:26:23.000Z\",\n    \"lastSeenContent\": {\n        \"contentTypeId\": 7,\n        \"description\": null,\n        \"entityId\": 41103,\n        \"eventId\": 84,\n        \"id\": 741,\n        \"issueId\": 18,\n        \"label\": null,\n        \"order\": 0,\n        \"position\": null,\n        \"s3ObjectKey\": null,\n        \"title\": null,\n        \"url\": null,\n        \"createdAt\": \"2022-01-19T18:05:46.000Z\",\n        \"updatedAt\": \"2022-01-19T18:05:46.000Z\",\n        \"event\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update all website data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isPublic\": false,\n    \"isAllWebsiteData\": true,\n    \"conditions\": {\n        \"dateStart\": \"2022-11-14\",\n        \"order\": [\n            \"-articleDate\"\n        ],\n        \"segment\": \"\",\n        \"sentiment\": \"\",\n        \"limit\": 100,\n        \"offset\": 0,\n        \"primaryKeywords\": [\n            \"all\"\n        ],\n        \"id\": \"\",\n        \"compositeKeyword\": {\n            \"compositeKeywords\": [],\n            \"keywords\": [\n                \"\"\n            ],\n            \"operator\": \"has\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/jobs/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"issueId\": 18,\n    \"lastSeenContentId\": 741,\n    \"jobStatus\": \"read\",\n    \"conditions\": {\n        \"contentTypeId\": 7,\n        \"entityId\": [705478, 695734],\n        \"approved\": false\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/jobs/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"220-xAsfue6pdKGnjeUUTSnXp32LkYo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deletedAt\": 0,\n    \"id\": 1,\n    \"jobStatus\": \"read\",\n    \"userId\": 26,\n    \"issueId\": 18,\n    \"lastSeenContentId\": 741,\n    \"name\": \"bitcoin\",\n    \"conditions\": {\n        \"approved\": false,\n        \"entityId\": [\n            705478,\n            695734\n        ],\n        \"contentTypeId\": 7\n    },\n    \"createdAt\": \"2022-11-03T14:59:29.000Z\",\n    \"updatedAt\": \"2022-11-04T18:26:23.000Z\",\n    \"lastSeenContent\": {\n        \"contentTypeId\": 7,\n        \"description\": null,\n        \"entityId\": 41103,\n        \"eventId\": 84,\n        \"id\": 741,\n        \"issueId\": 18,\n        \"label\": null,\n        \"order\": 0,\n        \"position\": null,\n        \"s3ObjectKey\": null,\n        \"title\": null,\n        \"url\": null,\n        \"createdAt\": \"2022-01-19T18:05:46.000Z\",\n        \"updatedAt\": \"2022-01-19T18:05:46.000Z\",\n        \"event\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 18:26:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "website_data",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJraWQiOiJzQTJiWm8wVFo5bUprTFY4c1duMTY1NmJKRjk1UmtPQXBRTENyTWZ6TjhNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyN2Y3ZTEyZi1kZmVmLTRkNmItODkwZS00MDFkYjNkMDY2MDkiLCJjb2duaXRvOmdyb3VwcyI6WyJhcHByb3ZlciIsImFkbWluIiwiZGV2ZWxvcGVyIl0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX0JYcnJLVUY2VSIsImNsaWVudF9pZCI6Ijd0OTQ1ZWg3c2ZvNmg4NW11cjU2OTQycnBvIiwiZXZlbnRfaWQiOiJlZTQ0Y2FiMS1kN2ZjLTRkZGQtOTk4Yy1kZTI3Y2UzMDc0YzAiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNjY5MDY4OTkyLCJleHAiOjE2NjkxNTUzOTIsImlhdCI6MTY2OTA2ODk5MiwianRpIjoiNjk4YWMwMzgtZTQ5OS00Nzk5LTk1MzUtMmRhMzA4ODMwYjQyIiwidXNlcm5hbWUiOiIyN2Y3ZTEyZi1kZmVmLTRkNmItODkwZS00MDFkYjNkMDY2MDkifQ.vO_cKoBDTEN2B0P_9_qaLpMNFltDb7B-InJS0ADCxV92ac9-ej8g_FDqrH7hWbezVWEDrmLCB4k802AeaE4SwAvt2pIvMeNOhls9uIsria6RzyZe4KoLBWOpP1rfMkInux2Y53qEYducocokr3PabCygJozbLRUZMvusE0RnWiMaJ99aFrvWqOuj3aiDTSBrpO50CUoYBCM8vUdSRjK9ovjVd5e-5upTN0H79sCTndy_zBkCYhqLXROX0zSWsVECnuQ8pnWSlzDVHXdLxmFjM2bT8_bmEnNiX-UY5fajpuuc_xTTEt7BgGZZsdLzeG9o-Z4xZ-SYFDTq3j3uMkODBA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"needsReview\": \"true\",\n    \"order\": [\n        \"-articleDate\"\n    ],\n    \"segment\": \"\",\n    \"sentiment\": \"\",\n    \"limit\": 100,\n    \"offset\": 0,\n    \"primaryKeywords\": [\n        \"Bitcoin\"\n    ],\n    \"id\": \"\",\n    \"compositeKeyword\": {\n        \"compositeKeywords\": [],\n        \"keywords\": [\n            \"\"\n        ],\n        \"operator\": \"has\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/website-data/headlines/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"website-data",
+								"headlines",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt_bu}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://devapi.bitcoinunbound.com/v1"
+		}
+	]
+}
